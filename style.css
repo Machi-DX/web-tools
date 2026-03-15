@@ -3,23 +3,37 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #e0f7fa, #e1bee7);
-  color: #333;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+  animation: gradientBG 10s ease infinite;
+}
+
+/* 背景アニメーション */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body {
+  background-size: 400% 400%;
 }
 
 /* ヘッダー */
 header {
-  background-color: #0d253f;
+  background-color: rgba(0,0,0,0.5);
   color: white;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
 }
 
 header h1 {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: 1px;
 }
@@ -29,11 +43,12 @@ header nav a {
   margin-left: 20px;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.2s;
 }
 
 header nav a:hover {
   color: #1abc9c;
+  transform: scale(1.1);
 }
 
 /* メインコンテンツ */
@@ -45,17 +60,17 @@ main {
 
 /* セクションカード風 */
 section {
-  background-color: white;
+  background-color: rgba(255,255,255,0.05);
   padding: 35px;
   margin-bottom: 35px;
   border-radius: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  backdrop-filter: blur(5px);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 section:hover {
   transform: translateY(-7px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
 }
 
 /* カード */
@@ -67,19 +82,20 @@ section:hover {
 
 .card {
   flex: 1 1 220px;
-  background-color: #1abc9c;
+  background: linear-gradient(135deg, #1abc9c, #16a085);
   color: white;
   padding: 25px;
   border-radius: 12px;
   text-align: center;
   font-weight: 600;
   font-size: 16px;
-  transition: transform 0.3s, background-color 0.3s;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  background-color: #16a085;
+  transform: translateY(-10px) rotate(-1deg);
+  background: linear-gradient(135deg, #16a085, #1abc9c);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
 .card a {
@@ -94,7 +110,7 @@ section:hover {
 footer {
   text-align: center;
   padding: 35px;
-  background-color: #0d253f;
+  background-color: rgba(0,0,0,0.5);
   color: #ffffffaa;
   font-size: 14px;
 }
