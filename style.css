@@ -1,50 +1,91 @@
 /* 全体 */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #e0f7fa, #e1bee7);
   color: #333;
 }
 
 /* ヘッダー */
 header {
-  background-color: #007acc;
+  background-color: #0d253f;
   color: white;
-  padding: 20px;
-  text-align: center;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 header nav a {
   color: white;
-  margin: 0 10px;
+  margin-left: 20px;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 header nav a:hover {
-  text-decoration: underline;
+  color: #1abc9c;
 }
 
 /* メインコンテンツ */
 main {
-  max-width: 800px;
-  margin: 40px auto;
+  max-width: 1000px;
+  margin: 50px auto;
   padding: 0 20px;
 }
 
-/* セクション */
+/* セクションカード風 */
 section {
   background-color: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 35px;
+  margin-bottom: 35px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.cards {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 220px;
+  background-color: #1abc9c;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background-color: #16a085;
 }
 
 /* フッター */
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #333;
-  color: white;
+  padding: 35px;
+  background-color: #0d253f;
+  color: #ffffffaa;
+  font-size: 14px;
 }
