@@ -58,6 +58,7 @@ section:hover {
   box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
+/* カード */
 .cards {
   display: flex;
   gap: 25px;
@@ -79,6 +80,14 @@ section:hover {
 .card:hover {
   transform: translateY(-5px);
   background-color: #16a085;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: white;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 /* フッター */
